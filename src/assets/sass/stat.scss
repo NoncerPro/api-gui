@@ -1,0 +1,29 @@
+.stat{
+    color: $grey;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    :before{
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -10px;
+        width: 100px;
+        height: 70px;
+        background-image: url("~@/assets/images/peek.svg");
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+}
+
+.hashrate{
+    >span{
+        color:$grey-dark;
+    }
+}
+
