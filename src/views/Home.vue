@@ -169,8 +169,8 @@ export default {
     LineChart
   },
   created() {
-    this.getDataFromApi();
-    this.interval = setInterval(this.getDataFromApi, 3 * 1000);
+    this.getFakeData();
+    this.interval = setInterval(this.getFakeData, 3 * 1000);
 
     this.saveData();
     this.interval2 = setInterval(this.saveData, 60 * 1000);
@@ -242,6 +242,7 @@ export default {
       this.updateData();
     },
     getFakeData() {
+      this.isConnected = true;
       const d1 = this.getRandomInt(2000);
       const d2 = this.getRandomInt(2000);
       const d3 = this.getRandomInt(2000);

@@ -1,5 +1,8 @@
 # api-gui
 
+![alt text](screenshot.png "screenshot")
+
+
 ## Project setup
 ```
 yarn
