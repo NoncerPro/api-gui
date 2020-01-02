@@ -169,8 +169,8 @@ export default {
     LineChart
   },
   created() {
-    this.getFakeData();
-    this.interval = setInterval(this.getFakeData, 3 * 1000);
+    this.getDataFromApi();
+    this.interval = setInterval(this.getDataFromApi, 3 * 1000);
 
     this.saveData();
     this.interval2 = setInterval(this.saveData, 60 * 1000);
@@ -191,7 +191,7 @@ export default {
         .catch(error => {
           this.isConnected = false;
           this.errorMessage = error;
-          console.error(error);
+          //console.error(error);
         });
     },
     isActive(span) {
